@@ -1,0 +1,91 @@
+/* importing the open sans font form fonts.google.com  */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+/* creating variables  */
+:root {
+  --success-color: #3ecc71;
+  --error-color: #e74c3c;
+}
+* {
+  /*The box sizing is placed here to ensure that margin and padding do not affect our sizing of the element*/
+  box-sizing: border-box;
+}
+/* styling the body element */
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+/* styling for the container class */
+.container {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgb(0, 0, 0, 0.3);
+  width: 400px;
+}
+/* styling the h2 element */
+h2 {
+  text-align: center;
+  margin: 0 0 20px;
+}
+/* styling the form element */
+.form {
+  padding: 30px 40px;
+}
+/* styling the form-control element */
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+/* styling for the label */
+.form-control label {
+  display: block;
+  color: #777;
+  margin-bottom: 5px;
+}
+/* styling for the input element */
+.form-control input {
+  width: 100%;
+  font-size: 14px;
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  padding: 10px;
+}
+/* changing the appearance of the focus on input */
+form-control input:focus {
+  outline: 0;
+  border-color: #777;
+}
+.form-control.success input {
+  border-color: var(--success-color);
+}
+.form-control.error input {
+  border-color: var(--error-color);
+}
+.form-control small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+.form-control.error small {
+  visibility: visible;
+}
+/* styling the button element */
+.form button {
+  cursor: pointer;
+  background-color: #3498db;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #3498db;
+  display: block;
+  border-radius: 4px;
+  color: white;
+}
